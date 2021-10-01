@@ -1,0 +1,24 @@
+{
+  "name": "back-piv",
+  "version": "1.0.0",
+  "description": "Trabalho back-end - Programação pra internet IV",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thatystober/back-piv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thatystober/back-piv/issues"
+  },
+  "homepage": "https://github.com/Thatystober/back-piv#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8",
+    "nodemon": "^2.0.13"
+  }
+}
