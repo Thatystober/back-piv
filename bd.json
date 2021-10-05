@@ -1,0 +1,5 @@
+[
+    {"isbn":1, "nome":"Código Limpo", "preco": 62, "autor":"Robert C. Martin", "editora":"Alta Books"},
+    {"isbn":2, "nome":"Arquitetura limpa", "preco": 53, "autor":"Robert C. Martin", "editora":"Alta Books"},
+    {"isbn":3, "nome":"Algoritmos: Lógica Para Desenvolvimento de Programação de Computadores", "preco": 67, "autor":"José Augusto N. G. Manzano", "editora":"Editora Érica"}
+]

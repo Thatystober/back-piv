@@ -9,7 +9,7 @@ exports.listar = (req, res) =>{
     })
 }
 
-exports.buscarId = (req, res) => {
+exports.buscarIsbn = (req, res) => {
     const id = req.params.id;
     Livro.findById(id, (err, livro) => {
         if(err){
@@ -31,6 +31,7 @@ exports.inserir = (req,res) => {
         }
         res.status(201).json(novoLivro);
     })
+    // if(novoLivro == )
 }
 
 exports.atualizar = (req, res) => {
@@ -49,20 +50,6 @@ exports.atualizar = (req, res) => {
     })
 }   
 
-exports.deletar = (req, res) => {
-    const id = req.params.id;
-    Livro.findByIdAndDelete(id, (err, livroDeletado) => {
-        if(err) {
-            res.status(500).send(err);
-        }
-        if(livroDeletado){
-            res.json(livroDeletado);
-        }else{
-            res.status(404).json({erro:"Livro não consta na loja online."});
-        }
-    });
-}
-
 exports.localizar = (req, res) => {
     if(req.query && req.query.nome){
         const paramNome = req.query.nome;
@@ -80,3 +67,18 @@ exports.localizar = (req, res) => {
         res.status(400).send({erro:"Você precisa inserir o nome."})
     }
 }
+
+exports.deletar = (req, res) => {
+    const id = req.params.id;
+    Livro.findByIdAndDelete(id, (err, livroDeletado) => {
+        if(err) {
+            res.status(500).send(err);
+        }
+        if(livroDeletado){
+            res.json(livroDeletado);
+        }else{
+            res.status(404).json({erro:"Livro não consta na loja online."});
+        }
+    });
+}
+
