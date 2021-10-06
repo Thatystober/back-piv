@@ -16,5 +16,8 @@ mongoose.connect('mongodb://localhost:27017/app_livros')
     console.log('Erro ao conectar com o Banco.')
   });
 
-  app.use('/api/livros', rotaLivro);
+  app.use('/livros', rotaLivro);
 
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+  })
