@@ -1,28 +1,29 @@
+
 GET http://localhost:3000/usuarios
 
 ###
 POST http://localhost:3000/usuarios
-x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWUyZDQ5MDVjNTA1YWM0OTdjNGFkMyIsImlhdCI6MTYzMzU2NTg3NiwiZXhwIjoxNjMzNTY5NDc2fQ.QjVePkspCds6uAixf1uvEi8OONv-xgQTweuFgRk270U
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWY4NjdmZDQ1Yzc0ZTBlZDFiNGU4YyIsImlhdCI6MTYzMzY1MDMxOCwiZXhwIjoxNjMzNjUzOTE4fQ.egeFgQ7A0DQAXgQy5v79r0lso7Jx_whJLUJQYYTlFDM
 Content-Type: application/json
 
 {
-    "nome":"user1",
-    "email":"user1@mail.com",
-    "senha":"12345"
+    "nome":"user2",
+    "email":"user2@mail.com",
+    "senha":"12346565"
 }
 
 ###
 GET http://localhost:3000/usuarios/search?nome=user1
-x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWUyZDQ5MDVjNTA1YWM0OTdjNGFkMyIsImlhdCI6MTYzMzU2NTg3NiwiZXhwIjoxNjMzNTY5NDc2fQ.QjVePkspCds6uAixf1uvEi8OONv-xgQTweuFgRk270U
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWY4NjdmZDQ1Yzc0ZTBlZDFiNGU4YyIsImlhdCI6MTYzMzY1MDMxOCwiZXhwIjoxNjMzNjUzOTE4fQ.egeFgQ7A0DQAXgQy5v79r0lso7Jx_whJLUJQYYTlFDM
 
 ###
 POST http://localhost:3000/usuarios/login
 Content-Type: application/json
 
 {
-    "nome":"user1",
-    "senha":"12345"
+    "nome":"user2",
+    "senha":"12346565"
 }
 
+###
 GET http://localhost:3000/livros
-x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWUyZDQ5MDVjNTA1YWM0OTdjNGFkMyIsImlhdCI6MTYzMzU2NTg3NiwiZXhwIjoxNjMzNTY5NDc2fQ.QjVePkspCds6uAixf1uvEi8OONv-xgQTweuFgRk270U

@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
 exports.listar = (req, res) => {
-    Usuario.find({}, (err, usuarios) => {
+    Usuario.find({}, (err, usuario) => {
         if(err){
             res.status(500).send(err);
         }
@@ -29,7 +29,7 @@ exports.buscarId = (req, res) => {
 }
 
 exports.inserir = (req,res) => {
-    let novoUsuario = new Usuario(req,body);
+    let novoUsuario = new Usuario(req.body);
     novoUsuario.senha = bcrypt.hashSync(req.body.senha,10);
     novoUsuario.save((err, usuario) => {
         if(err){
@@ -97,13 +97,11 @@ exports.validarUsuario = (req, res) => {
             if(err){
                 res.status(500).send(err);
             }
+            // if(usuario && usuario.senha === senhaUsuario){
             if(usuario && bcrypt.compareSync(senhaUsuario, usuario.senha)){
                 const token = jwt.sign({
                     id: usuario.id
-                }, 
-                'Th@ty', {
-                    expiresIn: "1h"
-                });
+                },'Th@ty', {expiresIn: "1h"});
                 res.status(201).json({token: token});
             }else {
                 res.status(401).json({erro: "Usuario ou senha invalido!"})

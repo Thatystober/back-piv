@@ -1,5 +1,5 @@
 [
-    {"id": 1, "isbn":15464, "nome":"Código Limpo", "preco": 62, "autor":"Robert C. Martin", "editora":"Alta Books"},
-    {"id": 2, "isbn":25645, "nome":"Arquitetura limpa", "preco": 53, "autor":"Robert C. Martin", "editora":"Alta Books"},
-    {"id": 3, "isbn":35454, "nome":"Algoritmos: Lógica Para Desenvolvimento de Programação de Computadores", "preco": 67, "autor":"José Augusto N. G. Manzano", "editora":"Editora Érica"}
+    {"isbn":15464, "nome":"Código Limpo", "preco": 62, "autor":"Robert C. Martin", "editora":"Alta Books"},
+    {"isbn":25645, "nome":"Arquitetura limpa", "preco": 53, "autor":"Robert C. Martin", "editora":"Alta Books"},
+    {"isbn":35454, "nome":"Algoritmos: Lógica Para Desenvolvimento de Programação de Computadores", "preco": 67, "autor":"José Augusto N. G. Manzano", "editora":"Editora Érica"}
 ]

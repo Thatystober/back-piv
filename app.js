@@ -6,7 +6,7 @@ const port = 3000
 const rotaLivro = require('./rotas/rota_livros');
 const rotaUsuario = require('./rotas/usuario_rotas');
 
-const usuarioController = require('./controller/usuario_controller')
+// const usuarioController = require('./controller/usuario_controller')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -25,7 +25,8 @@ mongoose.connect('mongodb://localhost:27017/app_livros')
     next();
   })
 
-  app.use('/livros', usuarioController.validaToken, rotaLivro);
+  // app.use('/livros', usuarioController.validaToken, rotaLivro);
+  app.use('/livros', rotaLivro);
   app.use('/usuarios', rotaUsuario);
 
   app.listen(port, () => {
