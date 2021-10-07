@@ -100,7 +100,7 @@ exports.localizar = (req, res) => {
     }
 }
 
-exports.deletar  = (req, res) => {
+  exports.deletar  = (req, res) => {
     const id = req.params.id;
     Livro.findByIdAndDelete(id, (err, livroDeletado) =>{
       if(err) {

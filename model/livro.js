@@ -6,8 +6,7 @@ const LivroSchema = new Schema({
     nome: String,
     preco: Number,
     autor: String,
-    editora: String, 
-    // qntd_exemplares: String
+    editora: String
 },
 {
     versionKey: false
