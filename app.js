@@ -2,14 +2,16 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const port = 3000
-
+const cors = require('cors')
 const rotaLivro = require('./rotas/rota_livros');
 const rotaUsuario = require('./rotas/usuario_rotas');
 
 // const usuarioController = require('./controller/usuario_controller')
+app.use(cors());
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+
 
 // Mongoose - BD
 mongoose.connect('mongodb://localhost:27017/app_livros')

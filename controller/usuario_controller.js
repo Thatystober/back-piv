@@ -120,6 +120,7 @@ const token = req.get('x-auth-token');
         jwt.verify(token, 'Th@ty', (err, payload) =>{
         if(err){
             res.status(401).json({erro:"Token Invalido!"});
+            console.log(err);
         }else{
             console.log("Payload"+payload);
             next();

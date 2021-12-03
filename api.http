@@ -3,7 +3,7 @@ GET http://localhost:3000/usuarios
 
 ###
 POST http://localhost:3000/usuarios
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWY4NjdmZDQ1Yzc0ZTBlZDFiNGU4YyIsImlhdCI6MTYzMzY1MDMxOCwiZXhwIjoxNjMzNjUzOTE4fQ.egeFgQ7A0DQAXgQy5v79r0lso7Jx_whJLUJQYYTlFDM
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWY4NjdmZDQ1Yzc0ZTBlZDFiNGU4YyIsImlhdCI6MTYzNDg2MDU0NiwiZXhwIjoxNjM0ODY0MTQ2fQ.YF6Q-Hr3_x-J98vQepNQFtPUpa8gb-NwEFBIw_LCcuY
 Content-Type: application/json
 
 {
@@ -13,8 +13,8 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/usuarios/search?nome=user1
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWY4NjdmZDQ1Yzc0ZTBlZDFiNGU4YyIsImlhdCI6MTYzMzY1MDMxOCwiZXhwIjoxNjMzNjUzOTE4fQ.egeFgQ7A0DQAXgQy5v79r0lso7Jx_whJLUJQYYTlFDM
+GET http://localhost:3000/usuarios/615f859dd45c74e0ed1b4e88
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWY4NjdmZDQ1Yzc0ZTBlZDFiNGU4YyIsImlhdCI6MTYzNDg2MDU0NiwiZXhwIjoxNjM0ODY0MTQ2fQ.YF6Q-Hr3_x-J98vQepNQFtPUpa8gb-NwEFBIw_LCcuY
 
 ###
 POST http://localhost:3000/usuarios/login

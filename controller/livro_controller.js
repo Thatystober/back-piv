@@ -20,9 +20,9 @@ exports.listar = async (req, res) => {
 
 
 exports.buscarIsbn = (req, res) => {
-    if(req.query.isbn){
-        const paramIsbn = req.query.isbn;
-        Livro.find({isbn: paramIsbn}, (err, livros) =>{
+    if(req.query.id){
+        const id = req.query.id;
+        Livro.findById(id, (err, livros) =>{
             if(err){
                 res.status(500).send(err);
             }
